@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components/login_page/input_data.dart';
 import 'package:flutter_application_1/components/welcome_page/background.dart';
 import '../constants.dart';
 
@@ -12,10 +13,9 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: kPrimaryColor,
         body: LayoutBuilder(
-          builder: (context, constraints) => SingleChildScrollView(
-            child: SafeArea(
-              child: LoginScreen(),
-            ),
+          builder: (context, constraints) => Padding(
+            padding: const EdgeInsets.only(top: 52),
+            child: LoginScreen(),
           ),
         ));
   }
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
         Positioned(
           bottom: 0,
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.70,
+            height: MediaQuery.of(context).size.height * 0.65,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               color: kPrimaryLightColor,
@@ -65,7 +65,7 @@ class LoginScreen extends StatelessWidget {
         Positioned(
           bottom: 0,
           child: Container(
-            height: (MediaQuery.of(context).size.height * 0.60) + (defaultPadding * 2),
+            height: (MediaQuery.of(context).size.height * 0.55) + (defaultPadding * 2),
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -73,6 +73,7 @@ class LoginScreen extends StatelessWidget {
                 top: Radius.circular(40),
               ),
             ),
+            child: InputInformation(),
           ),
         ),
       ]),

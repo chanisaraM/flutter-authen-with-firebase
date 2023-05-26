@@ -58,7 +58,7 @@ class WelcomeScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return LoginScreen();
+                          return LoginPage();
                         },
                       ),
                     ),
