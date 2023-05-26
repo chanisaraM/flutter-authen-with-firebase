@@ -30,14 +30,6 @@ class SignUpScreen extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Stack(children: <Widget>[
-          // Positioned(
-          //   top: -16,
-          //   left: 16,
-          //   child: Image.asset(
-          //     'assets/images/login_banner.png',
-          //     width: MediaQuery.of(context).size.width * 0.9,
-          //   ),
-          // ),
           Positioned(
             top: MediaQuery.of(context).size.height * 0.1,
             child: Container(
