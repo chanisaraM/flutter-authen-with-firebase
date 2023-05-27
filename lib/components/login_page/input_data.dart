@@ -5,6 +5,7 @@ import 'package:flutter_application_1/components/back_to_home_page.dart';
 import 'package:flutter_application_1/components/custom_btn.dart';
 import 'package:flutter_application_1/components/text_filed_normal.dart';
 import 'package:flutter_application_1/components/text_filed_password.dart';
+import 'package:flutter_application_1/pages/forgot_password.dart';
 import 'package:flutter_application_1/pages/sign_up.dart';
 import 'package:flutter_application_1/pages/welcome_page.dart';
 import '../../constants.dart';
@@ -91,20 +92,22 @@ class _SingInController extends State<SingInController> {
                     "Forgot Password",
                     style: TextStyle(fontSize: 12),
                   ),
-                  onPressed: () async {},
+                  onPressed: () => {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ForgotPasswordPage();
+                        },
+                      ),
+                    )
+                  },
                 ),
               ],
             ),
             SizedBox(height: 16),
             CustomBtn(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return Container();
-                  },
-                ),
-              ),
+              onPressed: () => {},
               text: 'Login',
               textColor: Colors.white,
               width: MediaQuery.of(context).size.width * 0.4,

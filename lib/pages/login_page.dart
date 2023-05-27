@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/login_page/input_data.dart';
-import 'package:flutter_application_1/components/welcome_page/background.dart';
 import '../constants.dart';
 
 class LoginPage extends StatelessWidget {

@@ -5,8 +5,7 @@ import 'package:flutter_application_1/components/custom_btn.dart';
 import 'package:flutter_application_1/components/text_filed_normal.dart';
 import 'package:flutter_application_1/components/text_filed_password.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
-import 'package:flutter_application_1/pages/sign_up.dart';
-import 'package:flutter_application_1/pages/welcome_page.dart';
+
 import '../../constants.dart';
 
 class SignUp extends StatelessWidget {
@@ -14,11 +13,6 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController username = TextEditingController();
-    TextEditingController email = TextEditingController();
-    TextEditingController password = TextEditingController();
-    TextEditingController confirmPassword = TextEditingController();
-
     return SingUpController();
   }
 }
@@ -73,18 +67,11 @@ class _SingUpController extends State<SingUpController> {
             SizedBox(height: 16),
             TextFiledPassword(
               controller: confirmPassword,
-              labelText: 'Password',
+              labelText: 'Confirm password',
             ),
             SizedBox(height: 24),
             CustomBtn(
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return Container();
-                  },
-                ),
-              ),
+              onPressed: () => {},
               text: 'Sign Up',
               textColor: Colors.white,
             ),
